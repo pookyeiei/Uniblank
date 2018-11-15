@@ -6,6 +6,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { PaggingComponent } from './components/pagging/pagging.component';
 import { SystemMessageComponent } from './components/system-message/system-message.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SystemMessageComponent } from './components/system-message/system-messa
     declarations: [
         SpinnerComponent,
         PaggingComponent,
-        SystemMessageComponent
+        SystemMessageComponent,
+        HeaderComponent
     ],
     exports: [
         FormsModule,

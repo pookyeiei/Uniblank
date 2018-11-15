@@ -12,6 +12,8 @@ import { SafeHtmlPipe } from './modules/core/pipes/safe-html.pipe';
 import { HomeComponent } from './modules/components/home/home.component';
 import { ContactComponent } from './modules/components/contact/contact.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { ArticleListComponent } from './modules/components/article-list/article-list.component';
+import { HeaderComponent } from './modules/core/components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AppRoutingModule } from './/app-routing.module';
     SystemMessageComponent,
     SafeHtmlPipe,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    ArticleListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
