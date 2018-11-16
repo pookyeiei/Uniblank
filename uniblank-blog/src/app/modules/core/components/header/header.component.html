@@ -1,6 +1,6 @@
 <header id="header">
   <!-- NAV -->
-  <div id="nav">
+  <div id='nav' [ngClass]="isShowNav ? 'shadow-active' : '' ">
     <!-- Top Nav -->
     <div id="nav-top">
       <div class="container">
@@ -24,13 +24,13 @@
 
         <!-- search & aside toggle -->
         <div class="nav-btns">
-          <button class="aside-btn"><i class="fa fa-bars"></i></button>
-          <button class="search-btn"><i class="fa fa-search"></i></button>
-          <div id="nav-search">
+          <button class="aside-btn" (click)="onShowNav()"><i class="fa fa-bars" ></i></button>
+          <button class="search-btn" (click)="onShowSearch()"><i class="fa fa-search"></i></button>
+          <div id="nav-search" [ngClass]="isShowSearch ? 'active' : ''">
             <form>
               <input class="input" name="search" placeholder="Enter your search...">
             </form>
-            <button class="nav-close search-close">
+            <button class="nav-close search-close" (click)="onCloseSearch()">
               <span></span>
             </button>
           </div>
@@ -45,14 +45,14 @@
 
 
     <!-- Aside Nav -->
-    <div id="nav-aside">
+    <div id='nav-aside' [ngClass]="isShowNav ? 'active' : '' ">
       <ul class="nav-aside-menu">
         <li><a href="#">บทความ</a></li>
         <li><a href="#">รู้จักเรา</a></li>
         <li><a href="#">ผลงาน</a></li>
         <li><a href="#">ติดต่อเรา</a></li>
       </ul>
-      <button class="nav-close nav-aside-close"><span></span></button>
+      <button class="nav-close" (click)="onCloseNav()"><span></span></button>
     </div>
     <!-- /Aside Nav -->
   </div>

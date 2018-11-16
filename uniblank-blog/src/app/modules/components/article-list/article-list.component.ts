@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-article-list',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleListComponent implements OnInit {
 
+  @ViewChild('localRef') paragraph: ElementRef;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public showSomeText(): void {
+    console.log(this.paragraph.nativeElement.innerText);
   }
 
 }
